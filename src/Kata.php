@@ -39,4 +39,9 @@ class Kata
         return explode($delimiter, $value);
 
     }
+
+    public function checkNewDelimiter($stringOfNumbers)
+    {
+        return "//" == substr($stringOfNumbers, 0, 2);
+    }
 }
