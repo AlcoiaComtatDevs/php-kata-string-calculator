@@ -11,7 +11,17 @@ class Kata
             return 0;
         }
 
-        $separatedNumbers = $this->separateStringByDelimiter($stringOfNumbers, ',');
+        $delimiter=',';
+
+        if ($this->checkNewDelimiter($stringOfNumbers)) {
+            $delimiter = $this->obtainDelimiter($stringOfNumbers);
+
+            $stringOfNumbers = substr($stringOfNumbers, 3);
+
+
+        }
+
+        $separatedNumbers = $this->separateStringByDelimiter($stringOfNumbers, $delimiter);
 
         $separateNumberNewDelimiter = array();
 
