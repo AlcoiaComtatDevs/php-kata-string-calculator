@@ -60,4 +60,16 @@ class KataTest extends \PHPUnit_Framework_TestCase
     }
 
 
+    /**
+     * @test
+     */
+    public function itShouldAcceptNewDelimiter()
+    {
+        $kata = new Kata();
+
+        $result = $kata->add("1\n2,3");
+
+        $this->assertEquals(6, $result);
+    }
+
 }
