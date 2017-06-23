@@ -7,6 +7,10 @@ class Kata
 {
     public function add($string)
     {
-        return 0;
+        if (empty($string)){
+            return 0;
+        }
+
+        return $string;
     }
 }
