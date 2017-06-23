@@ -11,6 +11,8 @@ class Kata
             return 0;
         }
 
-        return $string;
+        $separatedNumbers = explode(',',$string);
+
+        return array_sum($separatedNumbers);
     }
 }
