@@ -7,12 +7,18 @@ class Kata
 {
     public function add($string)
     {
-        if (empty($string)){
+        if (empty($string)) {
             return 0;
         }
 
-        $separatedNumbers = explode(',',$string);
+        $separatedNumbers = explode(',', $string);
 
-        return array_sum($separatedNumbers);
+        $totalSumOfNumbers = 0;
+        foreach ($separatedNumbers as $value) {
+            $separateNumberNewDelimiter = explode("\n", $value);
+            $totalSumOfNumbers += array_sum($separateNumberNewDelimiter);
+        }
+
+        return $totalSumOfNumbers;
     }
 }
