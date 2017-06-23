@@ -72,4 +72,13 @@ class KataTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(6, $result);
     }
 
+    /** @test */
+    public function itShouldNewDelimiterStartedWithTwoSlashes()
+    {
+        $kata = new Kata();
+
+        $result = $kata->checkNewDelimiter("//;\n1;2");
+
+        $this->assertTrue($result);
+    }
 }
