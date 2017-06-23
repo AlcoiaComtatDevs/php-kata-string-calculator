@@ -101,4 +101,16 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(3,$result);
     }
+
+    /** @test
+     *
+     */
+    public function itShouldThrowExceptionWhenNegativeNumbers()
+    {
+        $kata = new Kata();
+
+        $this->setExpectedException(\Exception::class);
+
+        $result = $kata->add("-1,2");
+    }
 }
