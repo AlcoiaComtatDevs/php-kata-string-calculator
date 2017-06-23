@@ -91,4 +91,14 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(';',$result);
     }
+
+    /** @test */
+    public function itShouldReturnSumWithNewDelimiter()
+    {
+        $kata = new Kata();
+
+        $result = $kata->add("//;\n1;2");
+
+        $this->assertEquals(3,$result);
+    }
 }
