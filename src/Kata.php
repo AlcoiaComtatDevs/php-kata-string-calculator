@@ -11,6 +11,10 @@ class Kata
             return 0;
         }
 
+        if (strpos($stringOfNumbers, '-')){
+            throw new \Exception("There is a negative number.");
+        }
+
         $delimiter=',';
 
         if ($this->checkNewDelimiter($stringOfNumbers)) {

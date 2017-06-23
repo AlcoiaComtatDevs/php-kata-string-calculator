@@ -103,7 +103,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test
-     *
+     * @throws \Exception
      */
     public function itShouldThrowExceptionWhenNegativeNumbers()
     {
@@ -111,6 +111,6 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
         $this->setExpectedException(\Exception::class);
 
-        $result = $kata->add("-1,2");
+        $result = $kata->add('-1,2');
     }
 }
