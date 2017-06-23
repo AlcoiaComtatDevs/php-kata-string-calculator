@@ -34,4 +34,16 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(1, $result);
     }
+
+    /**
+     * @test
+     */
+    public function itShouldBeThreeForOneAndTwoParameters()
+    {
+        $kata = new Kata();
+
+        $result = $kata->add('1,2');
+
+        $this->assertEquals(3, $result);
+    }
 }
