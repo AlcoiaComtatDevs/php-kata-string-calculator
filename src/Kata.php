@@ -44,4 +44,9 @@ class Kata
     {
         return "//" == substr($stringOfNumbers, 0, 2);
     }
+
+    public function obtainDelimiter($stringOfNumbers)
+    {
+        return substr($stringOfNumbers,2,1);
+    }
 }
