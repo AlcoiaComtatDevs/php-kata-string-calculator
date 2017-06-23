@@ -46,4 +46,18 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(3, $result);
     }
+
+    /**
+     * @test
+     */
+    public function itShouldBeSendSeveralNumbersAndSum()
+    {
+        $kata = new Kata();
+
+        $result = $kata->add('1,2,3');
+
+        $this->assertEquals(6, $result);
+    }
+
+
 }
